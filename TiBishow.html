@@ -3,7 +3,30 @@
 </head>
 
 <body>
-  <h1>TiBi show</h1>  
+  <h1>TiBi show</h1>
+  {{> ads}}
+  {{> addAds}} 
 
 </body>
 
+
+<template name="ads">
+	{{#each ad}}
+		<li class="ad {{curentId}}">
+			{{user}}@{{datetime}}
+			<br>
+				{{content}}
+			<br>
+				{{contact}}
+			<br>
+		
+		</li>
+		<br>
+		
+	{{/each}}
+	
+</template>
+
+<template name="addAds">
+	add ads
+</template>
