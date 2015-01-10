@@ -9,7 +9,7 @@ if(Meteor.isClient)
     {
       'ad':function()
       {
-        return addList.find();
+        return adsList.find();
       },
       'curentId':function()
       {
@@ -18,6 +18,33 @@ if(Meteor.isClient)
 
     }
   );
+  Template.addAds.events
+  (
+    {
+      'submit form': function()
+      {
+        event.preventDefault();
+        var adContent = event.target.content.value;
+        var adContact = event.target.contact.value;
+        var adPrice   = event.target.price.value;
+
+        adsList.insert
+        (
+          {
+            content: adContent,
+            contact: adContact,
+            price  : adPrice,            
+          }
+
+        );
+
+        
+        console.log(adContent);
+        console.log(adContact);
+        console.log(adPrice  );
+      }
+    }
+  );
 }
 
-addList = new Mongo.Collection('ads');
+adsList = new Mongo.Collection('ads');

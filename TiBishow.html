@@ -17,6 +17,8 @@
 			<br>
 				{{content}}
 			<br>
+				cena:{{price}} din
+			<br>
 				{{contact}}
 			<br>
 		
@@ -28,5 +30,12 @@
 </template>
 
 <template name="addAds">
-	add ads
+  <form>
+    Tekst oglasa:<br><textarea rows="4" cols="50" name="content">
+    </textarea>
+    <br>
+    Kontakt:<input type="text" name="contact"><br>
+    Cena:<input type="text" name="price"><br>
+    <input type="submit" value="Ubaci oglas">
+  </form>	
 </template>
