@@ -7,3 +7,5 @@
 meteor-platform
 autopublish
 insecure
+accounts-password
+mrt:accounts-ui-bootstrap-3
